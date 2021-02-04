@@ -59,9 +59,9 @@ ref={staffRef}>
               <IonSelectOption value="جيد جداً">جيد جداً</IonSelectOption>
               <IonSelectOption value="جيد">جيد</IonSelectOption>
               <IonSelectOption value="محايد">محايد</IonSelectOption>
-              <IonSelectOption value="ممتاز">مقبول</IonSelectOption>
-              <IonSelectOption value="ممتاز">سيء</IonSelectOption>
-              <IonSelectOption value="سيء">سيء جداً</IonSelectOption>
+              <IonSelectOption value="مقبول">مقبول</IonSelectOption>
+              <IonSelectOption value="سيء">سيء</IonSelectOption>
+              <IonSelectOption value="سيء جداً">سيء جداً</IonSelectOption>
             </IonSelect>
               </IonCol>
             </IonRow>
@@ -79,9 +79,9 @@ ref={jobRef}>
               <IonSelectOption value="جيد جداً">جيد جداً</IonSelectOption>
               <IonSelectOption value="جيد">جيد</IonSelectOption>
               <IonSelectOption value="محايد">محايد</IonSelectOption>
-              <IonSelectOption value="ممتاز">مقبول</IonSelectOption>
-              <IonSelectOption value="ممتاز">سيء</IonSelectOption>
-              <IonSelectOption value="سيء">سيء جداً</IonSelectOption>
+              <IonSelectOption value="مقبول">مقبول</IonSelectOption>
+              <IonSelectOption value="سيء">سيء</IonSelectOption>
+              <IonSelectOption value="سيء جداً">سيء جداً</IonSelectOption>
             </IonSelect>
               </IonCol>
             </IonRow>  
@@ -98,9 +98,9 @@ ref={transportationRef}>
               <IonSelectOption value="جيد جداً">جيد جداً</IonSelectOption>
               <IonSelectOption value="جيد">جيد</IonSelectOption>
               <IonSelectOption value="محايد">محايد</IonSelectOption>
-              <IonSelectOption value="ممتاز">مقبول</IonSelectOption>
-              <IonSelectOption value="ممتاز">سيء</IonSelectOption>
-              <IonSelectOption value="سيء">سيء جداً</IonSelectOption>
+              <IonSelectOption value="مقبول">مقبول</IonSelectOption>
+              <IonSelectOption value="سيء">سيء</IonSelectOption>
+              <IonSelectOption value="سيء جداً">سيء جداً</IonSelectOption>
             </IonSelect>
               </IonCol>
             </IonRow>
