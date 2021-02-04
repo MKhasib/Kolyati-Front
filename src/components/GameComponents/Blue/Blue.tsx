@@ -2,7 +2,7 @@ import { IonImg } from "@ionic/react";
 import React from "react";
 import classes from './Blue.module.css';
 
-const Blue: React.FC <{name:string}> = ({name}) => {
+const Blue: React.FC <{name:string,role:string}> = ({name,role}) => {
   
 
     return(
