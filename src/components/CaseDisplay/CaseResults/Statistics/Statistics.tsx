@@ -8,7 +8,7 @@ const Statistic: React.FC<{ majors: major[] }> = ({ majors }) => {
   let prefrences:number[] = [1,1,1,1,1];
   if (temp.length > 0) {
     prefrences = [
-      5-temp.findIndex(p => "صعوبة الدراسة" === p ),
+      5-temp.findIndex(p => "سهولة الدراسة" === p ),
       5-temp.findIndex((p) =>  "فرص العمل" === p),
       5-temp.findIndex((p) =>  "المواصلات" === p),
 

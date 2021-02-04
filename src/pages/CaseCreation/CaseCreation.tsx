@@ -25,7 +25,7 @@ const CaseCreation: React.FC = () => {
   const [majorsChoice, setMajorChoice] = useState<String[]>([]);
   const[showMajors,setShowMajors]= useState(true);
   const [prefenceSelected, setPrefenceSelected] = useState(false);
-  const [prefrences,setPrefrences]=useState<string[]>(['صعوبة الدراسة','فرص العمل','المواصلات','التكاليف الدراسية','كفائة الطاقم التدريسي'])
+  const [prefrences,setPrefrences]=useState<string[]>(['سهولة الدراسة','فرص العمل','المواصلات','التكاليف الدراسية','كفائة الطاقم التدريسي'])
   const [tawjihiType, setTawjihiType] = useState<string>();
   const [gpa, setGpa] = useState<string>();
   const [description, setDescription] = useState<string>("");

@@ -71,7 +71,7 @@ const Case: React.FC<{
       </IonCardHeader>
       <IonCardContent className={classes.description}>
 <div className={classes.Text}>
-{fold(props.description, 50,[]).join('\n')}
+{props.description}
 </div>
       </IonCardContent>
     </IonCard>

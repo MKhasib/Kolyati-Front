@@ -32,7 +32,7 @@ const PrefrenceSelection: React.FC<{ name: string }> = ({ name }) => {
       icon = briefcase;
       cardStyle = classes.Third;
       break;
-    case "صعوبة الدراسة":
+    case "سهولة الدراسة":
       icon = schoolOutline;
       cardStyle = classes.Fourth;
       break;

@@ -35,6 +35,7 @@ export const LOCAL_STORAGE_KEY_CREATED="koliyati.created";
 
 export const BASE_URL="https://kolyati.herokuapp.com/api/v1/";
 export function fold(input:string, lineSize:number,lineArra:string[]):string[] {
+  return [input];
   const lineArray =lineArra|| [];
   if (input.length <= lineSize) {
       lineArray.push(input);
