@@ -34,17 +34,17 @@ export const LOCAL_STORAGE_KEY_DESCRIPTION="koliyati.prefrences.description";
 export const LOCAL_STORAGE_KEY_CREATED="koliyati.created";
 
 export const BASE_URL="https://kolyati.herokuapp.com/api/v1/";
-export function fold(input:string, lineSize:number,lineArra:string[]):string[] {
-  return [input];
-  const lineArray =lineArra|| [];
-  if (input.length <= lineSize) {
-      lineArray.push(input);
-      return lineArray;
-  }
-  lineArray.push(input.substring(0, lineSize));
-  var tail = input.substring(lineSize);
-  return fold(tail, lineSize, lineArray);
-}
+// export function fold(input:string, lineSize:number,lineArra:string[]):string[] {
+//   return [input];
+//   const lineArray =lineArra|| [];
+//   if (input.length <= lineSize) {
+//       lineArray.push(input);
+//       return lineArray;
+//   }
+//   lineArray.push(input.substring(0, lineSize));
+//   var tail = input.substring(lineSize);
+//   return fold(tail, lineSize, lineArray);
+// }
 const App: React.FC = () =>{    
   const [firstTime,setFirstTime]=useState<boolean>(true);
 
