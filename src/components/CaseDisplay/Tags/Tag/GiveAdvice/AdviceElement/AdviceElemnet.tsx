@@ -39,7 +39,7 @@ ref={difficalityRef}>
               <IonSelectOption value="سهل جداً">سهل جداً</IonSelectOption>
               <IonSelectOption value="سهل">سهل</IonSelectOption>
               <IonSelectOption value="محايد">محايد</IonSelectOption>
-              <IonSelectOption value="الصع متوسط الصعوبة">متوسط الصعوبة</IonSelectOption>
+              <IonSelectOption value="متوسط الصعوبة">متوسط الصعوبة</IonSelectOption>
               <IonSelectOption value="صعب">صعب</IonSelectOption>
               <IonSelectOption value="صعب جداً">صعب جداً</IonSelectOption>
             </IonSelect>
