@@ -50,6 +50,7 @@ const CaseShow: React.FC = () => {
         const url = window.location.href;
         const caseId = url.substring(url.lastIndexOf("/"));
         const result = await api.get(`/case${caseId}`);
+
         if (result.status === 200) {
           if(isMounted)
           {setCreated(caseId);
