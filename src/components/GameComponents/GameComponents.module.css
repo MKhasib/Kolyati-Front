@@ -1,0 +1,43 @@
+@font-face { font-family: VCR; src: url("../../res/VCR_OSD_MONO_1.001.ttf"); } 
+
+.flex {
+  display: flex;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.flexBasis {
+  flex-basis: 300px;
+  margin: 0 100px;
+  margin: 16px;
+}
+
+.flexBasis:hover {
+  cursor: pointer;
+}
+
+.Title {
+  background-image: linear-gradient(to right top, #051937, #0e152b, #101121, #0e0d16, #080808);
+  height: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.Imposter {
+  color: red;
+
+  font-family: VCR, cursive;
+  font-weight: bold;
+  font-size: 60px;
+}
+.Imposter:hover{
+  cursor:default;
+}

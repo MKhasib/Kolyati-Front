@@ -21,7 +21,8 @@
     justify-content: center;
     flex-grow: 1;
 
-    align-items: center;}
+    align-items: center;
+  }
 .flexBasis{
     flex-basis: 450px;
     margin: 16px;

@@ -1,0 +1,19 @@
+.Green {
+    text-align: center;
+}
+
+.Green:hover {
+    border: 5px solid #047700;
+    padding: 0 8px;
+
+
+}
+
+
+.Name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #047700;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
