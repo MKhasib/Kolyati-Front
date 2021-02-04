@@ -9,6 +9,7 @@ import PageNotFound from "../../pages/PageNotFound/PageNotFound";
 import Search from "../../pages/Search/SearchCase";
 import SharePage from "../../pages/Share/Share";
 import Nav from "../Nav/Nav";
+import AboutUs from "../../pages/AboutUs/AboutUs";
 
 const Main:
 React.FC=(props)=>(
@@ -22,6 +23,7 @@ React.FC=(props)=>(
       <Route path="/Case/" component={MyCase} exact={true}/>
       <Route path="/Share" component={SharePage} exact={true}/>
       <Route path="/Search" component={Search} exact={true}/>
+      <Route path="/AboutUs" component={AboutUs} exact={true}/>
       <Route exact path="/" render={() => <Redirect to="/Home" />} />
       <Route component={PageNotFound} />
     </IonRouterOutlet>

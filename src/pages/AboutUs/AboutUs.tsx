@@ -1,10 +1,10 @@
 import { IonHeader, IonToolbar, IonTitle, IonButton, IonMenuButton, IonContent } from "@ionic/react";
-import { title } from "process";
 import React from "react";
 
 const AboutUs: React.FC = () => {
   
- 
+    const title="من نحن";
+
     return(
         <>
         <IonHeader dir="rtl">
@@ -16,10 +16,7 @@ const AboutUs: React.FC = () => {
         </IonToolbar>
       </IonHeader>
           <IonContent fullscreen color="light">
-         
-         
-      
-
+              
           </IonContent>
           </>
         );
