@@ -1,8 +1,6 @@
 import React from "react";
-import Red from "./Red/Red";
 import classes from "./GameComponents.module.css";
-import Green from "./Green/Green";
-import Blue from "./Blue/Blue";
+import Player from "./Player/Player";
 const GameComponents: React.FC = () => {
   //const gameType = Math.random() > 0.5 ? "One Imposter" : "Two Imposters";
   const gameType = "One Imposter";
@@ -17,14 +15,14 @@ const GameComponents: React.FC = () => {
   if (gameType === "One Imposter") {
     indexes.push(getRandomInt(3));
     console.log(indexes);
-    map.set("Not Me", names[indexes[0]]);
+    map.set(names[indexes[0]],"Not Me" );
     indexes.push(names[indexes[0]] === names[0] ? 1 : 0);
     console.log(indexes);
 
     indexes.push(indexes.includes(0) ? (indexes.includes(1) ? 2 : 1) : 0);
 
-    map.set("Imposter", names[indexes[1]]);
-    map.set(`I know It's ${names[indexes[1]]}`, names[indexes[2]]);
+    map.set(names[indexes[1]],"Imposter");
+    map.set(names[indexes[2]],`I know It's ${names[indexes[1]]}`);
   }
 
   function handleDoubleClick(name:string) {
@@ -33,30 +31,20 @@ const GameComponents: React.FC = () => {
       window.open("https://www.linkedin.com/in/mkhasib1/")
     }
   }
-  let players = [
-    <div className={classes.flexBasis} key={1}>
-      <Red
-        role={"It's Not me"}
-        name={"" + map.get("Not Me")}
-        doubleClicked={handleDoubleClick}
+  let colors=["#770000","#047700","#004177"];
+
+  colors.sort(() => Math.random() - 0.5);
+  let playersContainer=names.map((name,index)=>{
+    return (<div className={classes.flexBasis} key={index}>
+      <Player
+      name={name}
+      role={""+map.get(name)}
+      color={colors[index]}
+      doubleClicked={handleDoubleClick}
+
       />
-    </div>,
-    <div className={classes.flexBasis} key={2}>
-      <Green
-        role={`I know It's ${names[indexes[0]]}`}
-        name={"" + map.get("Imposter")}
-        doubleClicked={handleDoubleClick}
-      />
-    </div>,
-    <div className={classes.flexBasis} key={3}>
-      <Blue
-        role={`I know It's ${names[indexes[1]]}`}
-        name={"" + map.get(`I know It's ${names[indexes[1]]}`)}
-        doubleClicked={handleDoubleClick}
-      />
-    </div>,
-  ];
-  players.sort(() => Math.random() - 0.5);
+    </div>)
+  });
   function getRandomInt(max: number) {
     return Math.floor(Math.random() * Math.floor(max));
   }
@@ -66,7 +54,7 @@ const GameComponents: React.FC = () => {
         <div className={classes.Imposter}>{gameType}</div>
       </div>
       <div className={classes.Center}>Find The Imposter</div>
-      <div className={classes.flex}>{players.map((player) => player)}</div>
+      <div className={classes.flex}>{playersContainer}</div>
     </div>
   );
 };

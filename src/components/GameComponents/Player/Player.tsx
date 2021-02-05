@@ -1,15 +1,19 @@
 import { IonImg, IonToast } from "@ionic/react";
 import React, { useState } from "react";
-import classes from "./Red.module.css";
-const Red: React.FC<{
+import classes from "./Player.module.css";
+const Player: React.FC<{
   name: string;
   role: string;
+  color: string;
   doubleClicked: (e: any) => void;
-}> = ({ name, role, doubleClicked }) => {
+}> = ({ name, role, color, doubleClicked }) => {
   const [showToast, setShowToast] = useState(false);
+  const colorStyle = { color: color };
+  const borderStyle = { borderColor: `${color} ` };
   return (
     <div
-      className={classes.Red}
+      className={classes.Player}
+      style={borderStyle}
       onClick={(e) => {
         setTimeout(() => setShowToast(true), 500);
       }}
@@ -17,8 +21,10 @@ const Red: React.FC<{
         doubleClicked(name);
       }}
     >
-      <div className={classes.Name}>{name}</div>
-      <IonImg src={require("../../../res/Red.svg")} />
+      <div className={classes.Name} style={colorStyle}>
+        {name}
+      </div>
+      <IonImg src={color==="#770000"?require("../../../res/Red.svg"):color=== "#047700"?require("../../../res/Green.svg"):require("../../../res/Blue.svg")} />
       <IonToast
         isOpen={showToast}
         onDidDismiss={() => setShowToast(false)}
@@ -30,4 +36,4 @@ const Red: React.FC<{
     </div>
   );
 };
-export default Red;
+export default Player;
