@@ -75,6 +75,12 @@
   font-size: 34px;
   margin-top: 20px;
 }
+.info {
+  text-align: center;
+  font-size: 18px;
+  color:rgb(133, 133, 133);
+  margin-top: 10px;
+}
 @media only screen and (max-width: 600px) {
   .Imposter{
     font-size: 40px;

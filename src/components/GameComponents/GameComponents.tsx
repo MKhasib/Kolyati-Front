@@ -1,15 +1,18 @@
 import React, { useEffect } from "react";
 import classes from "./GameComponents.module.css";
 import Player from "./Player/Player";
-import {Howl, Howler} from 'howler';
+import { Howl, Howler } from "howler";
 const GameComponents: React.FC = () => {
   useEffect(() => {
     var sound = new Howl({
-       src:require("../../res/imposter.mp4")
+      src: require("../../res/imposter.mp4"),
     });
     Howler.volume(1.0);
     sound.play();
-  }, [])
+  }, []);
+  var bruh = new Howl({
+    src: require("../../res/Bruh.mp3"),
+  });
   const gameType = Math.random() > 0.5 ? "One Imposter" : "Two Imposters";
   let names = ["Majd", "Wasfi", "Shireen"];
   let indexes: number[] = [];
@@ -39,6 +42,8 @@ const GameComponents: React.FC = () => {
   function handleDoubleClick(name: string) {
     if (map.get(name) === map.get(names[indexes[1]])) {
       window.open(profileMap.get(name));
+    } else {
+      bruh.play();
     }
   }
   let colors = ["#770000", "#047700", "#004177"];
@@ -64,13 +69,19 @@ const GameComponents: React.FC = () => {
     <div>
       <div className={classes.Title}>
         <div className={classes.Opacity}>
-        <div className={classes.Imposter} >{gameType}</div>
-
+          <div className={classes.Imposter}>{gameType}</div>
         </div>
       </div>
-      <div className={classes.Center}>{gameDescription}</div>
+      <div className={classes.Center}>
+        {gameDescription}
+       
+      </div>
+      <div className={classes.info}>
+      <div >One Click - Info</div>
+        <div>Two Clicks - Pick</div>
+      </div>
+      
       <div className={classes.flex}>{playersContainer}</div>
-     
     </div>
   );
 };
