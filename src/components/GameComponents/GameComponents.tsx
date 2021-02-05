@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import classes from "./GameComponents.module.css";
 import Player from "./Player/Player";
 import { Howl, Howler } from "howler";
+import ToolTip from "./ToolTip/ToolTip";
 const GameComponents: React.FC = () => {
   useEffect(() => {
     var sound = new Howl({
@@ -72,15 +73,11 @@ const GameComponents: React.FC = () => {
           <div className={classes.Imposter}>{gameType}</div>
         </div>
       </div>
-      <div className={classes.Center}>
-        {gameDescription}
-       
-      </div>
+      <div className={classes.Center}>{gameDescription}</div>
       <div className={classes.info}>
-      <div >One Click - Info</div>
-        <div>Two Clicks - Pick</div>
+        <ToolTip />
       </div>
-      
+
       <div className={classes.flex}>{playersContainer}</div>
     </div>
   );
