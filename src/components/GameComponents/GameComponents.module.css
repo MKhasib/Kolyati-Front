@@ -75,3 +75,8 @@
   font-size: 34px;
   margin-top: 20px;
 }
+@media only screen and (max-width: 600px) {
+  .Imposter{
+    font-size: 40px;
+  }
+}

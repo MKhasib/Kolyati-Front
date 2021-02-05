@@ -1,6 +1,7 @@
 .Player{
     text-align: center;
     border: none;
+    margin: 50px;
 }
 .Player:hover{
     padding: 0 8px;
@@ -10,8 +11,8 @@
 .Name{
     font-size: 32px;
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .centerText{
     text-align: center;
