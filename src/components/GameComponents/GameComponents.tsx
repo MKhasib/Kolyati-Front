@@ -1,3 +1,4 @@
+import { magnet } from "ionicons/icons";
 import React from "react";
 import classes from "./GameComponents.module.css";
 import Player from "./Player/Player";
@@ -5,7 +6,7 @@ const GameComponents: React.FC = () => {
   //const gameType = Math.random() > 0.5 ? "One Imposter" : "Two Imposters";
   const gameType = "One Imposter";
   let names = ["Majd", "Wasfi", "Shireen"];
-  let indexes = [];
+  let indexes:number[] = [];
   names.sort(() => Math.random() - 0.5);
   var map = new Map<string, string>();
   var profileMap = new Map<string, string>();
@@ -21,14 +22,14 @@ const GameComponents: React.FC = () => {
 
     indexes.push(indexes.includes(0) ? (indexes.includes(1) ? 2 : 1) : 0);
 
-    map.set(names[indexes[1]],"Imposter");
+    map.set(names[indexes[1]],`I know It's ${names[indexes[0]]}`);
     map.set(names[indexes[2]],`I know It's ${names[indexes[1]]}`);
   }
 
   function handleDoubleClick(name:string) {
-    if(name===map.get("Imposter"))
+    if(map.get(name)===map.get(names[indexes[1]]))
     {
-      window.open("https://www.linkedin.com/in/mkhasib1/")
+      window.open(profileMap.get(name));
     }
   }
   let colors=["#770000","#047700","#004177"];
