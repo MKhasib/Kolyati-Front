@@ -33,15 +33,39 @@
   justify-content: center;
 
 }
-
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
 .Imposter {
-  color: red;
-
+  color: #FF4E15;
   font-family: VCR, cursive;
   font-weight: bold;
   font-size: 60px;
+  animation: fadein  5s;
 }
+.Opacity{
+  animation: opacity 8s;
+}
+@keyframes opacity{
+  from { opacity: 0;
+  }
+  to   { opacity: 1;
+  }
+}
+@keyframes fadein {
+  from { 
+    transform: translateY(-100%);
+  }
+  to   {
+    transform: translateY(0);
 
+  }
+} 
 .Imposter:hover {
   cursor: default;
 }
