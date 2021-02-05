@@ -44,7 +44,7 @@ const CaseResults: React.FC = () => {
                 <Result
                   major={e}
                   index={index}
-                  color={index === 0 ? "#eb596e" : "rgba(54, 162, 235, 1)"}
+                  color={index === 0 ? "#eb596e" : "#339FCE"}
                 />
               </div>
             ))}

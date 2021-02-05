@@ -102,7 +102,7 @@ const Statistic: React.FC<{ majors: major[] }> = ({ majors }) => {
             {
               label: `${majors[1].name + " في " + majors[1].university}`,
               data: data[1],
-              backgroundColor: "rgba(54, 162, 235, 1)",
+              backgroundColor: "#339FCE",
 
               borderColor: "rgba(54, 162, 235, 0.2)",
 
