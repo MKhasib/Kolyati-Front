@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "koliyati",
+  "appId": "io.ionic.kolyati",
+  "appName": "Kolyati",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",
