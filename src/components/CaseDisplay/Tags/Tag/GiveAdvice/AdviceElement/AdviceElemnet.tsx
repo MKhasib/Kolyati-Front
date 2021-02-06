@@ -25,7 +25,7 @@ handleClick.handleClick(""+nameInputRef.current?.value,majorId,[difficalityRef.c
        <IonGrid>
            
           <IonRow>
-              <IonCol size="8" className={classes.black+" "+classes.size}>
+              <IonCol size="4" className={classes.black+" "+classes.size}>
               صعوبة التخصص
               </IonCol>
               <IonCol className={classes.size}>           
@@ -46,7 +46,7 @@ ref={difficalityRef}>
               </IonCol>
             </IonRow> 
             <IonRow>
-              <IonCol size="8" className={classes.black}>
+              <IonCol size="4" className={classes.black}>
               كفائة الطاقم التدريسي
               
               </IonCol>
@@ -66,7 +66,7 @@ ref={staffRef}>
               </IonCol>
             </IonRow>
             <IonRow>
-              <IonCol size="8" className={classes.black}>
+              <IonCol size="4" className={classes.black}>
     فرص العمل في السوق
                 </IonCol>
               <IonCol  className={classes.size}>
@@ -86,7 +86,7 @@ ref={jobRef}>
               </IonCol>
             </IonRow>  
             <IonRow>
-              <IonCol size="8" className={classes.black}>
+              <IonCol size="4" className={classes.black}>
                    المواصلات
               </IonCol>
               <IonCol  className={classes.size}>
