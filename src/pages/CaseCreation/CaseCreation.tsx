@@ -86,16 +86,8 @@ const CaseCreation: React.FC = () => {
     localStorage.setItem(LOCAL_STORAGE_KEY_TAWIJIHI_TYPE,JSON.stringify(tawjihiType));
     if(gpa)
     {const gpaNumber=parseFloat(gpa);
-      if(gpaNumber===0)
-      {
-        localStorage.setItem(LOCAL_STORAGE_KEY_GPA,JSON.stringify("0"));
-      }
-      else if(gpaNumber<50)
-      {
-        localStorage.setItem(LOCAL_STORAGE_KEY_GPA,JSON.stringify("0"));
-
-      }
-      else if(gpaNumber>100)
+  
+       if(gpaNumber>100|| gpaNumber<50)
       {
         localStorage.setItem(LOCAL_STORAGE_KEY_GPA,JSON.stringify("100"));
 
