@@ -41,14 +41,14 @@ const CaseCreation: React.FC = () => {
       let gpaData=localStorage.getItem(LOCAL_STORAGE_KEY_GPA);
       if(gpaData)
       { const gpaNumber=JSON.parse(gpaData);
-        if(gpaNumber>=50)
+        if(gpaNumber>=60)
         {   
           
           setGpa(""+gpaNumber);
         } 
         else
         {
-          setGpa("0");
+          setGpa("99.8");
         } 
       
         const showMajorsData=JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_MAJORS_SHOW)!);
@@ -87,9 +87,9 @@ const CaseCreation: React.FC = () => {
     if(gpa)
     {const gpaNumber=parseFloat(gpa);
   
-       if(gpaNumber>100|| gpaNumber<50)
+       if(gpaNumber>100|| gpaNumber<60)
       {
-        localStorage.setItem(LOCAL_STORAGE_KEY_GPA,JSON.stringify("99.8"));
+        localStorage.setItem(LOCAL_STORAGE_KEY_GPA,JSON.stringify(99.8));
 
       }
       else
@@ -127,7 +127,16 @@ const CaseCreation: React.FC = () => {
       return;
     }
      try{
-
+      console.log(JSON.stringify({
+        userId:idData,
+        name:name,
+        prefrences:prefrences,
+        location:location,
+        majorsChoice:majorsChoice,
+        tawjihiType:tawjihiType,
+        gpa:gpa,
+        description:description
+      }))
       const res=await api.post("/cases" , {
         userId:idData,
         name:name,
