@@ -1,15 +1,16 @@
 import { IonImg, IonToast } from "@ionic/react";
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import classes from "./Player.module.css";
 const Player: React.FC<{
   name: string;
   role: string;
   color: string;
   doubleClicked: (e: any) => void;
-}> = ({ name, role, color, doubleClicked }) => {
+}> = ({ name, role, color,doubleClicked }) => {
   const [showToast, setShowToast] = useState(false);
   const colorStyle = { color: color };
   const borderStyle = { borderColor: `${color} ` };
+ 
   return (
     <div
       className={classes.Player}

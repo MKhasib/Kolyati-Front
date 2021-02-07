@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./GameComponents.module.css";
 import Player from "./Player/Player";
 import { Howl, Howler } from "howler";
 import ToolTip from "./ToolTip/ToolTip";
 const GameComponents: React.FC = () => {
+  const [wrong,setWrong]=useState<boolean>(false);
   useEffect(() => {
     var sound = new Howl({
       src: require("../../res/imposter.mp4"),
@@ -12,7 +13,7 @@ const GameComponents: React.FC = () => {
     sound.play();
   }, []);
   var bruh = new Howl({
-    src: require("../../res/Bruh.mp3"),
+    src: require("../../res/Buzz.mp3"),
   });
   const gameType = Math.random() > 0.5 ? "One Imposter" : "Two Imposters";
   let names = ["Majd", "Wasfi", "Shireen"];
@@ -45,6 +46,10 @@ const GameComponents: React.FC = () => {
       window.open(profileMap.get(name));
     } else {
       bruh.play();
+      setWrong(true);
+      setTimeout(()=>{
+        setWrong(false);
+      },2000)
     }
   }
   let colors = ["#770000", "#047700", "#004177"];
@@ -68,6 +73,9 @@ const GameComponents: React.FC = () => {
 
   return (
     <div>
+     {wrong? <div className={classes.Wrong}>
+        <div className={classes.WrongText}>Wrong</div>
+      </div>:null}
       <div className={classes.Title}>
         <div className={classes.Opacity}>
           <div className={classes.Imposter}>{gameType}</div>
