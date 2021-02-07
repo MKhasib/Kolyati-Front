@@ -89,7 +89,7 @@ const CaseCreation: React.FC = () => {
   
        if(gpaNumber>100|| gpaNumber<50)
       {
-        localStorage.setItem(LOCAL_STORAGE_KEY_GPA,JSON.stringify("100"));
+        localStorage.setItem(LOCAL_STORAGE_KEY_GPA,JSON.stringify("99.8"));
 
       }
       else

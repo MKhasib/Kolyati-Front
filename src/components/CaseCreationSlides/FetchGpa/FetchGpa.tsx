@@ -12,7 +12,7 @@ const handleGpa=()=>{
   setGpa(""+inputRef.current?.value);
 }
 const handleNotGpa=()=>{
-  setGpa("100");
+  setGpa("99.8");
 }
 
 return (<>
